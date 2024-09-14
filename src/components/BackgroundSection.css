@@ -1,0 +1,41 @@
+/* src/BackgroundSection.css */
+
+.background-section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+  }
+  
+  .background-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+  }
+  
+  .background-content {
+    z-index: 2;
+    max-width: 600px;
+    padding: 20px;
+  }
+  
+  .background-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .background-section p {
+    font-size: 1.5rem;
+  }
+  

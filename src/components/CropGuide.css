@@ -1,0 +1,47 @@
+.crop-guide {
+  padding: 20px;
+}
+
+.soil-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.soil-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.soil-card img {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: cover;
+}
+
+.soil-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.soil-card.expanded {
+  grid-column: span 2; /* Makes the card expand over two columns */
+  background-color: #f1f1f1;
+}
+
+.soil-detail {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.soil-detail img {
+  margin-top: 10px;
+  max-height: 200px;
+  width: 100%;
+}
