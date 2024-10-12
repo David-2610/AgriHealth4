@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './CropGuide.css';
 
 // Sample data for soil types with random soil images
@@ -76,7 +76,24 @@ const soilData = [
 ];
 
 // Soil type card with expandable details
-const SoilTypeCard = ({ soilType, isExpanded, onClick }) => (
+
+// Define the type for soilType prop
+interface SoilType {
+  type: string;
+  image: string;
+  crops: string[];
+  fertilizers: string[];
+  seasons: string[];
+}
+
+// Define the props for the SoilTypeCard component
+interface SoilTypeCardProps {
+  soilType: SoilType;
+  isExpanded: boolean;
+  onClick: () => void;
+}
+
+const SoilTypeCard: React.FC<SoilTypeCardProps> = ({ soilType, isExpanded, onClick }) => (
   <div className={`soil-card ${isExpanded ? 'expanded' : ''}`} onClick={onClick}>
     <h3>{soilType.type}</h3>
     <img src={soilType.image} alt={soilType.type} />
